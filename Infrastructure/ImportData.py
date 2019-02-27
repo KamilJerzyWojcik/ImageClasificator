@@ -6,9 +6,9 @@ import matplotlib
 from os import path
 from scipy.io import loadmat
 
-def get_mnist_data2():
+def get_mnist_data():
 
-    mnist_path = path.join("Data", "mnist-original.mat")  # the MNIST file has been previously downloaded here
+    mnist_path = path.join("Data", "mnist-original.mat")
     mnist_raw = loadmat(mnist_path)
     mnist = {
         "data": mnist_raw["data"].T,
@@ -16,10 +16,18 @@ def get_mnist_data2():
         "COL_NAMES": ["label", "data"],
         "DESCR": "mldata.org dataset: mnist-original",
     }
-    num = 36000
-    print(mnist["data"][num])
-    print("target: ", mnist["target"][num])
-    some_digit = mnist["data"][num].reshape(28, 28)
+
+    if False:
+        num = 36000
+        show_digit(mnist["data"][num], mnist["target"][num])
+
+    return mnist["data"], mnist["target"]
+
+
+def show_digit(digit_image, digit_target=""):
+    print(digit_image)
+    print(".......................")
+    print("target: ", digit_target)
+    some_digit = digit_image.reshape(28, 28)
     plt.imshow(some_digit)
     plt.show()
-    print("Success!")
