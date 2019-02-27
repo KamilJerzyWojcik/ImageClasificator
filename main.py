@@ -18,8 +18,7 @@ X_train, X_test, y_train, y_test = EditData.GetTrainAndTestData(X, y)
 # EditData.plot_roc_curve(y_train_5_forest, y_scores_forest, "Forest:")
 
 
-
-MachineLearning.GetOVOSGDClassirfier(X_train, X_test, y_train, y_test)
+MachineLearning.GetMultiLabelKNeiborsClassifier(X_train, X_test, y_train, y_test)
 
 #MachineLearning.GetForestClassifier2(X_train, X_test, y_train, y_test)
 

@@ -6,6 +6,8 @@ from sklearn.model_selection import cross_val_score, cross_val_predict
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score, precision_recall_curve, roc_curve, roc_auc_score
 from sklearn.multiclass import OneVsOneClassifier
 from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from sklearn.neighbors import KNeighborsClassifier
 
 def GetSGDClassifier2(X_train, X_test, y_train, y_test):
     n = 36000
@@ -69,8 +71,6 @@ def Get10SGDClassifiers(X_train, X_test, y_train, y_test):
     print("macierz punktów: ", array_score)
 
 
-
-
 def GetSGDClassifier(X_train, X_test, y_train, y_test):
     y_train_5_SGD = (y_train == 5)
     y_test_5_SGD = (y_test == 5)
@@ -120,11 +120,22 @@ def GetOVOSGDClassirfier(X_train, X_test, y_train, y_test):
     dokladnosc = cross_val_score(sgdClassifier, X_train, y_train, cv=3, scoring="accuracy")
     dokladnosc_scale = cross_val_score(sgdClassifier, X_train_scaled, y_train, cv=3, scoring="accuracy")
 
+    y_train_pred = cross_val_predict(sgdClassifier, X_train_scaled, y_train, cv=3)
+    matrix_conf = confusion_matrix(y_train, y_train_pred)
+    row_sums = matrix_conf.sum(axis=1, keepdims=True)
+    norm_conf_matrix = matrix_conf/row_sums
+    np.fill_diagonal(norm_conf_matrix, 0)
+
+    plt.matshow(norm_conf_matrix, cmap=plt.cm.gray)
+
+
+
     print("każda cyfra ma swój klasyfikator")
     print("predykcja: ", predict)
     print("target: ", y_test[1])
     print("dokladnosc: ", dokladnosc)
     print("dokladnosc po skalowaniu: ", dokladnosc_scale)
+    print("macierz pomyłek: ", matrix_conf)
 
 
 def GetForestClassifier2(X_train, X_test, y_train, y_test):
@@ -133,6 +144,7 @@ def GetForestClassifier2(X_train, X_test, y_train, y_test):
     randomForestClassifier.fit(X_train, y_train)
     n = 1591
     predict = randomForestClassifier.predict([X_test[n]])
+
     print("......Random Forest..........")
     print("Predykcja: ", predict)
     print("Target: ", y_test[n])
@@ -140,3 +152,17 @@ def GetForestClassifier2(X_train, X_test, y_train, y_test):
     print(".............................")
 
 
+def GetMultiLabelKNeiborsClassifier(X_train, X_test, y_train, y_test):
+    y_train_large = (y_train >= 7)
+    y_train_odd = (y_train % 2 == 0)
+    y_multilabrl = np.c_[y_train_large, y_train_odd]
+
+    kneighbors = KNeighborsClassifier()
+    #kneighbors.fit(X_train, y_multilabrl)
+
+    y_train_knn_pred = cross_val_predict(kneighbors, X_train, y_multilabrl, cv=3)
+    f1 = f1_score(y_multilabrl, y_train_knn_pred, average="macro")
+
+    print(kneighbors.predict([X_test[1]]))
+    print("target: ", y_test[1])
+    print(f1)
