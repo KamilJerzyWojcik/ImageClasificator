@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c13140a4-3185-436c-8174-39dd17e9a4c8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ImageClasificator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ImageClasificator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/MachineLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/MachineLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -16,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -28,19 +26,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Infrastructure/MachineLearning.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+            <state relative-caret-position="230">
+              <caret line="170" column="62" selection-start-line="170" selection-start-column="62" selection-end-line="170" selection-end-column="62" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
-                <element signature="e#534#2726#0" />
-                <element signature="e#2792#3237#0" />
-                <element signature="e#3302#3997#0" />
-                <element signature="e#4063#4905#0" />
-                <element signature="e#4977#5855#0" />
-                <element signature="e#5767#6249#0" />
+                <element signature="e#617#2809#0" />
+                <element signature="e#2875#3320#0" />
+                <element signature="e#3383#4078#0" />
+                <element signature="e#4144#4986#0" />
+                <element signature="e#5058#6162#0" />
+                <element signature="e#6229#6712#0" />
+                <element signature="e#6790#7222#0" />
+                <element signature="e#7293#7787#0" />
+                <element signature="e#7761#7891#0" />
               </folding>
             </state>
           </provider>
@@ -49,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Infrastructure/EditData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
+            <state relative-caret-position="17">
               <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
             </state>
           </provider>
@@ -64,6 +65,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bina</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -77,9 +83,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-223" />
+    <option name="y" value="18" />
     <option name="width" value="1439" />
     <option name="height" value="807" />
   </component>
@@ -148,7 +154,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../housing_prices/venvMac/bin/python" />
+      <option name="SDK_HOME" value="C:\Users\kamiljerzywojcik\Documents\repository\ML\ImageClasificator\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -177,15 +183,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1439" height="807" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496474" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18387777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4811189" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4810401" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -229,33 +235,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Infrastructure/EditData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
+        <state relative-caret-position="17">
           <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Infrastructure/MachineLearning.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+        <state relative-caret-position="230">
+          <caret line="170" column="62" selection-start-line="170" selection-start-column="62" selection-end-line="170" selection-end-column="62" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
-            <element signature="e#534#2726#0" />
-            <element signature="e#2792#3237#0" />
-            <element signature="e#3302#3997#0" />
-            <element signature="e#4063#4905#0" />
-            <element signature="e#4977#5855#0" />
-            <element signature="e#5767#6249#0" />
+            <element signature="e#617#2809#0" />
+            <element signature="e#2875#3320#0" />
+            <element signature="e#3383#4078#0" />
+            <element signature="e#4144#4986#0" />
+            <element signature="e#5058#6162#0" />
+            <element signature="e#6229#6712#0" />
+            <element signature="e#6790#7222#0" />
+            <element signature="e#7293#7787#0" />
+            <element signature="e#7761#7891#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

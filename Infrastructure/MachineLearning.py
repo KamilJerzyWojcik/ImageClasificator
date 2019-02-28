@@ -158,11 +158,35 @@ def GetMultiLabelKNeiborsClassifier(X_train, X_test, y_train, y_test):
     y_multilabrl = np.c_[y_train_large, y_train_odd]
 
     kneighbors = KNeighborsClassifier()
-    #kneighbors.fit(X_train, y_multilabrl)
+    kneighbors.fit(X_train, y_multilabrl)
 
-    y_train_knn_pred = cross_val_predict(kneighbors, X_train, y_multilabrl, cv=3)
-    f1 = f1_score(y_multilabrl, y_train_knn_pred, average="macro")
+    #y_train_knn_pred = cross_val_predict(kneighbors, X_train, y_multilabrl, cv=3)
+    #f1 = f1_score(y_multilabrl, y_train_knn_pred, average="macro")
 
     print(kneighbors.predict([X_test[1]]))
     print("target: ", y_test[1])
-    print(f1)
+
+
+
+def GetKNeibordToCleanNoise(X_train, X_test, y_train, y_test):
+    noise = np.random.randint(0, 100, size=(60000, 784))
+    X_train_mod = X_train + noise
+    noise = np.random.randint(0, 100, size=(10000, 784))
+    X_test_mode = X_test + noise
+    y_train_mod = X_train
+    y_test_mod = X_test
+    kneighbors = KNeighborsClassifier()
+    kneighbors.fit(X_train_mod, y_train_mod)
+    some_index = 123
+    clean_digit = kneighbors.predict([X_test_mode[some_index]])
+    plot_digit(X_test_mode[some_index])
+    plt.show()
+    plot_digit(clean_digit)
+    plt.show()
+
+def plot_digit(data):
+    image = data.reshape(28, 28)
+    plt.imshow(image,
+               interpolation="nearest")
+    plt.axis("off")
+
